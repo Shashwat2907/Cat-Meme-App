@@ -21,6 +21,9 @@ function highlightCheckedOption(e){
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
 
+document.addEventListener('click',function(e){
+    if(memeModal.style.display === 'flex' && !memeModal.contains(e.target) && !getImageBtn.contains(e.target)) closeModal();
+})
 function closeModal(){
     memeModal.style.display = 'none'
 }
